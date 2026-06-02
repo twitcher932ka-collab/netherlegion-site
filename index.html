@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetherLegion | Официальный сайт SMP сервера</title>
+    <style>
+        /* 🎨 УЛЬТИМАТИВНЫЕ АДСКИЕ СТИЛИ NETHERLEGION (ЧИСТЫЙ CSS) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0612; /* Тёмно-адский бэкграунд */
+            color: #e0d5f0;
+            overflow-x: hidden;
+            /* 🌌 СЮДА МОЖНО БУДЕТ БАХНУТЬ ТЕКСТУРУ КОСМОСА НА ФОН:
+               background-image: url('assets/space_bg.png'); */
+        }
+
+        /* ⚡ ШЕКЕРНЫЙ НЕОНОВЫЙ ХЕДЕР (ШАПКА САЙТА) */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(18, 9, 32, 0.85);
+            border-bottom: 2px solid #8b26e0;
+            box-shadow: 0 0 20px rgba(139, 38, 224, 0.4);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #bc3bf7;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(188, 59, 247, 0.8);
+        }
+
+        nav a {
+            color: #bfa6ff;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+            text-shadow: 0 0 10px #bc3bf7;
+        }
+
+        /* 🪐 ГЛАВНЫЙ ЭКРАН (HERO SECTION) */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+            text-shadow: 0 0 30px rgba(139, 38, 224, 0.8);
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            max-width: 600px;
+            color: #bfa6ff;
+        }
+
+        /* 🔥 СВЕРХЗВУКОВАЯ КНОПКА КОПИРОВАНИЯ IP */
+        .ip-btn {
+            background: linear-gradient(45deg, #8b26e0, #bc3bf7);
+            color: #fff;
+            border: none;
+            padding: 15px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(188, 59, 247, 0.5);
+            transition: 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .ip-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(188, 59, 247, 0.9);
+        }
+
+        /* 💎 БЛОК С КАРТОЧКАМИ ДОНАТА И ТЕКСТУРКАМИ */
+        .donate-section {
+            padding: 100px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #11081c;
+        }
+
+        .donate-section h2 {
+            font-size: 40px;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            color: #fff;
+            text-shadow: 0 0 15px #bc3bf7;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+        }
+
+        .card {
+            background: #1a0d2a;
+            border: 2px solid #3d1b5c;
+            border-radius: 12px;
+            width: 300px;
+            padding: 30px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #bc3bf7;
+            box-shadow: 0 0 25px rgba(188, 59, 247, 0.5);
+        }
+
+        /* 📷 СЮДА МЫ ЗАШЬЕМ НАШИ КАСТОМНЫЕ ТЕКСТУРКИ ПРИВИЛЕГИЙ */
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background-color: #25123e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            /* Измени на свои картинки: background-image: url('assets/vip_icon.png'); */
+        }
+
+        .card h3 {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .card .price {
+            font-size: 28px;
+            color: #bc3bf7;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ⚡ ХЕДЕР -->
+<header>
+    <div class="logo">NetherLegion</div>
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#donate">Донат</a>
+        <a href="https://t.me" target="_blank">Регистрация</a>
+    </nav>
+</header>
+
+<!-- 🪐 ГЛАВНЫЙ ЭКРАН -->
+<section class="hero" id="home">
+    <h1>Добро пожаловать в Легион</h1>
+    <p>Уникальный полуприватный ванильный SMP сервер с полным погружением в 3D-технологии и кастомные ритуалы!</p>
+    <!-- Скрипт копирования IP при клике -->
+    <button class="ip-btn" onclick="copyIP()">Скопировать IP сервера</button>
+</section>
+
+<!-- 💎 ДОНАТ МАГАЗИН -->
+<section class="donate-section" id="donate">
+    <h2>Привилегии проекта</h2>
+    <div class="cards-container">
+
+        <!-- VIP КАРТОЧКА -->
+        <div class="card">
+            <div class="card-icon">💎</div>
+            <h3>VIP</h3>
+            <div class="price">150₽ / мес</div>
+            <p>Пафосный суффикс в чате и доступ к базовым командам комфорта.</p>
+        </div>
+
+        <!-- SUPER КАРТОЧКА -->
+        <div class="card">
+            <div class="card-icon">🔥</div>
+            <h3>SUPER</h3>
+            <div class="price">300₽ / мес</div>
+            <p>Увеличенный инвентарь, кастомные частицы вокруг тела и право на полет.</p>
+        </div>
+
+        <!-- SPECTRUM КАРТОЧКА -->
+        <div class="card">
+            <div class="card-icon">🌌</div>
+            <h3>SPECTRUM</h3>
+            <div class="price">990₽ / НАВСЕГДА</div>
+            <p>Статус Генерала. Своя кастомная пластинка, уникальный префикс и право карать чучел!</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- 🛠️ СКРИПТ НА INTERACTION И КОПИРОВАНИЕ (ЖИВОЙ JS) -->
+<script>
+    function copyIP() {
+        // В кавычки впиши будущий реальный IP сервера!
+        const ip = "play.netherlegion.ru";
+        navigator.clipboard.writeText(ip).then(() => {
+            alert("🚀 IP сервера NetherLegion успешно скопирован в буфер обмена! Ждем тебя в игре!");
+        }).catch(err => {
+            console.error("Ошибка копирования: ", err);
+        });
+    }
+</script>
+</body>
+</html>
