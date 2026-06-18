@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetherLegion | Официальный сайт SMP сервера</title>
+    <title>NETHER LEGION — Официальный сайт кибер-империи</title>
+
+    <!-- 💎 ТВОЙ ЕБЕЙШИЙ НЕОНОВЫЙ ФАВИКОН ВО ВКЛАДКЕ БРАУЗЕРА -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <style>
-        /* 🎨 УЛЬТИМАТИВНЫЕ АДСКИЕ СТИЛИ NETHERLEGION (ЧИСТЫЙ CSS) */
+        /* 🎨 ТОТАЛЬНЫЙ НЕОНОВЫЙ КОНТРАСТ ЖЕКИ (Чёрный люкс + Фиолетовое свечение) */
         * {
             margin: 0;
             padding: 0;
@@ -14,231 +18,585 @@
         }
 
         body {
-            background-color: #0b0612; /* Тёмно-адский бэкграунд */
-            color: #e0d5f0;
+            background-color: #000000;
+            color: #ffffff;
             overflow-x: hidden;
-            /* 🌌 СЮДА МОЖНО БУДЕТ БАХНУТЬ ТЕКСТУРУ КОСМОСА НА ФОН:
-               background-image: url('assets/space_bg.png'); */
+            background-image: radial-gradient(circle at 50% 50%, #1a0033 0%, #000000 80%);
+            min-height: 100vh;
+        }
+        /* 🚀 СВЕРХЗВУКОВЫЕ АНИМАЦИИ ВЫЛЕТА (ДЛЯ ПЛАВНОСТИ НА 180 ГЦ) */
+        .animate-fade-in {
+            animation: fadeInUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
         }
 
-        /* ⚡ ШЕКЕРНЫЙ НЕОНОВЫЙ ХЕДЕР (ШАПКА САЙТА) */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* 📱 ШАПКА И НАВИГАЦИЯ ПО ОТДЕЛЬНЫМ СТРАНИЦАМ */
         header {
+            background: rgba(10, 0, 20, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #4d0099;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 50px;
-            background: rgba(18, 9, 32, 0.85);
-            border-bottom: 2px solid #8b26e0;
-            box-shadow: 0 0 20px rgba(139, 38, 224, 0.4);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
+            animation: fadeInScale 0.5s ease-out;
         }
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: #bc3bf7;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 0 0 10px rgba(188, 59, 247, 0.8);
-        }
-
-        nav a {
-            color: #bfa6ff;
-            text-decoration: none;
-            margin-left: 30px;
-            font-size: 18px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #fff;
-            text-shadow: 0 0 10px #bc3bf7;
-        }
-
-        /* 🪐 ГЛАВНЫЙ ЭКРАН (HERO SECTION) */
-        .hero {
-            height: 100vh;
+        .logo-section {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            margin-top: 60px;
+            gap: 15px;
         }
 
-        .hero h1 {
-            font-size: 64px;
-            text-transform: uppercase;
-            color: #fff;
-            margin-bottom: 20px;
-            letter-spacing: 4px;
-            text-shadow: 0 0 30px rgba(139, 38, 224, 0.8);
+        .logo-section img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 0 15px #9933ff;
         }
 
-        .hero p {
+        .logo-text {
             font-size: 22px;
-            margin-bottom: 40px;
-            max-width: 600px;
-            color: #bfa6ff;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #ffffff, #9933ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        /* 🔥 СВЕРХЗВУКОВАЯ КНОПКА КОПИРОВАНИЯ IP */
-        .ip-btn {
-            background: linear-gradient(45deg, #8b26e0, #bc3bf7);
-            color: #fff;
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav button {
+            background: transparent;
+            border: 1px solid transparent;
+            color: #aaaaaa;
+            padding: 8px 16px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        nav button:hover, nav button.active {
+            color: #ffffff;
+            border-color: #9933ff;
+            background: rgba(153, 51, 255, 0.1);
+            box-shadow: 0 0 15px rgba(153, 51, 255, 0.4);
+        }
+
+        /* 📦 КОНТЕЙНЕР ДЛЯ СТРАНИЦ */
+        .main-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active-page {
+            display: block;
+        }
+        /* 👑 РАСТЯГИВАЕМ ТВОЙ БАННЕР НА 100% ШИРИНЫ ЭКРАНА БЕЗ ЛИМИТОВ */
+        .full-screen-banner {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            margin-top: -40px;
+            background-color: #000000;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeInScale 0.8s ease-out;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: drop-shadow(0 0 35px #9933ff);
+        }
+
+        /* 📐 ЖЕКА-ФИКС: ТА САМАЯ ИДЕАЛЬНАЯ ПОЗИЦИЯ ПЛАШЕК -380PX СТРОГО ПОД БУКВЫ */
+        .top-grid-sections {
+            display: flex;
+            gap: 25px;
+            justify-content: space-between;
+            align-items: stretch;
+            margin-top: -380px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 20;
+        }
+
+        .grid-left-side {
+            flex: 1;
+            text-align: center;
+        }
+
+        .grid-right-side {
+            flex: 1.2;
+        }
+
+        .card-custom {
+            background: rgba(15, 5, 30, 0.75);
+            backdrop-filter: blur(5px);
+            border: 1px solid #4d0099;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.8);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            height: 100%;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+            border-color: #9933ff;
+            box-shadow: 0 10px 30px rgba(153, 51, 255, 0.3);
+        }
+
+        /* СТИЛИ ДЛЯ ИНТЕРАКТИВНОЙ ВЕБ-ФОРМЫ АНКЕТЫ */
+        .input-label {
+            font-size: 13px;
+            font-weight: bold;
+            color: #aaaaaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            text-align: left;
+        }
+
+        .input-field {
+            width: 100%;
+            background: #0a0512;
+            border: 1px solid #4d0099;
+            padding: 14px;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            margin-top: 6px;
+            margin-bottom: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #9933ff;
+            box-shadow: 0 0 15px rgba(153, 51, 255, 0.5);
+            background: #110522;
+        }
+
+        .btn-action {
+            display: inline-block;
+            background: linear-gradient(135deg, #4d0099, #9933ff);
+            color: white;
             border: none;
-            padding: 15px 40px;
-            font-size: 20px;
+            padding: 14px 35px;
+            font-size: 18px;
             font-weight: bold;
             border-radius: 8px;
             cursor: pointer;
-            box-shadow: 0 0 15px rgba(188, 59, 247, 0.5);
-            transition: 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(153, 51, 255, 0.4);
+            text-decoration: none;
             text-transform: uppercase;
         }
 
-        .ip-btn:hover {
+        .btn-action:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(188, 59, 247, 0.9);
+            box-shadow: 0 0 25px #9933ff;
         }
 
-        /* 💎 БЛОК С КАРТОЧКАМИ ДОНАТА И ТЕКСТУРКАМИ */
-        .donate-section {
-            padding: 100px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: #11081c;
-        }
-
-        .donate-section h2 {
-            font-size: 40px;
-            margin-bottom: 50px;
-            text-transform: uppercase;
-            color: #fff;
-            text-shadow: 0 0 15px #bc3bf7;
-        }
-
-        .cards-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            max-width: 1200px;
-        }
-
-        .card {
-            background: #1a0d2a;
-            border: 2px solid #3d1b5c;
-            border-radius: 12px;
-            width: 300px;
-            padding: 30px;
-            text-align: center;
-            transition: 0.3s;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: #bc3bf7;
-            box-shadow: 0 0 25px rgba(188, 59, 247, 0.5);
-        }
-
-        /* 📷 СЮДА МЫ ЗАШЬЕМ НАШИ КАСТОМНЫЕ ТЕКСТУРКИ ПРИВИЛЕГИЙ */
-        .card-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 20px;
-            background-color: #25123e;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            /* Измени на свои картинки: background-image: url('assets/vip_icon.png'); */
-        }
-
-        .card h3 {
-            font-size: 24px;
-            color: #fff;
-            margin-bottom: 15px;
-        }
-
-        .card .price {
-            font-size: 28px;
-            color: #bc3bf7;
-            font-weight: bold;
-            margin-bottom: 20px;
+        .ip-box {
+            background: #111;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            color: #9933ff;
+            border: 1px dashed #4d0099;
+            display: inline-block;
+            margin-top: 12px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-<!-- ⚡ ХЕДЕР -->
+<!-- 📱 НАВИГАЦИОННАЯ ШАПКА ИМПЕРИИ -->
 <header>
-    <div class="logo">NetherLegion</div>
+    <div class="logo-section">
+        <img src="favicon.png" alt="NL">
+        <div class="logo-text">Nether Legion</div>
+    </div>
     <nav>
-        <a href="#home">Главная</a>
-        <a href="#donate">Донат</a>
-        <a href="https://t.me" target="_blank">Регистрация</a>
+        <button class="nav-btn active" onclick="switchPage('home')">Главная</button>
+        <button class="nav-btn" onclick="switchPage('register')">Регистрация</button>
+        <button class="nav-btn" onclick="switchPage('rules')">Правила</button>
+        <button class="nav-btn" onclick="switchPage('mods')">Моды</button>
+        <button class="nav-btn" onclick="switchPage('donate')">Донат</button>
+        <button class="nav-btn" onclick="switchPage('packs')">Сборки</button>
     </nav>
 </header>
 
-<!-- 🪐 ГЛАВНЫЙ ЭКРАН -->
-<section class="hero" id="home">
-    <h1>Добро пожаловать в Легион</h1>
-    <p>Уникальный полуприватный ванильный SMP сервер с полным погружением в 3D-технологии и кастомные ритуалы!</p>
-    <!-- Скрипт копирования IP при клике -->
-    <button class="ip-btn" onclick="copyIP()">Скопировать IP сервера</button>
-</section>
+<!-- 🔥 БЛОК ТВОЕГО БАННЕРA 1920х1080 НА ВЕСЬ ЭКРАН -->
+<div id="home-banner-block" class="full-screen-banner" style="position: relative;">
+    <!-- 📐 ЖЕКА-ФИКС: ПОДЗАГОЛОВОК ПАРИТ СТРОГО НА САМОМ ВЕРХУ НАД БУКВАМИ -->
+    <p id="top-title-text" style="position: absolute; width: 100%; top: 120px; left: 0; color: #aaaaaa; font-size: 16px; text-align: center; z-index: 100; font-weight: bold; letter-spacing: 1px; text-shadow: 0 0 10px rgba(0,0,0,0.9); animation: slideInLeft 0.7s ease-out;">
+        SMP сервер кубической кибер-империи.
+    </p>
+    <img src="banner.png" alt="NETHER LEGION" class="banner-img" style="position: relative; z-index: 10;">
+</div>
 
-<!-- 💎 ДОНАТ МАГАЗИН -->
-<section class="donate-section" id="donate">
-    <h2>Привилегии проекта</h2>
-    <div class="cards-container">
+<div class="main-wrapper">
+    <!-- ===================================================================== -->
+    <!-- 🏠 СТРАНИЦА 1: ГЛАВНАЯ (ПЛАШКИ КНОПОК ОПУЩЕНЫ НА -380PX СТРОГО ПОД БУКВЫ) -->
+    <!-- ===================================================================== -->
+    <div id="home" class="page active-page animate-fade-in">
 
-        <!-- VIP КАРТОЧКА -->
-        <div class="card">
-            <div class="card-icon">💎</div>
-            <h3>VIP</h3>
-            <div class="price">150₽ / мес</div>
-            <p>Пафосный суффикс в чате и доступ к базовым командам комфорта.</p>
+        <!-- 📐 СЕТКА ЖЕКИ: ПЛАШКА С КНОПКОЙ IP СЛЕВА, ПРИВЕТСТВИЕ СПРАВА ПОД БУКВАМИ -->
+        <div class="top-grid-sections">
+
+            <!-- Левая плашка: Копирование IP -->
+            <div class="grid-left-side">
+                <div class="card-custom">
+                    <p style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">👇 НАЖМИ ДЛЯ КОПИРОВАНИЯ IP 👇</p>
+                    <div class="ip-box" onclick="copyIP()">play.netherlegion.ru</div>
+                    <p id="copy-status" style="color: #66ff66; margin-top: 12px; font-weight: bold; display: none;">✅ IP УСПЕШНО СКОПИРОВАН!</p>
+                </div>
+            </div>
+
+            <!-- Правая плашка: Добро пожаловать в Легион -->
+            <div class="grid-right-side">
+                <div class="card-custom" style="text-align: left;">
+                    <h3 style="font-size: 18px; color: #9933ff;">🔷 ДОБРО ПОЖАЛОВАТЬ В ЛЕГИОН!</h3>
+                    <p style="color: #cccccc; margin-top: 10px; font-size: 14px; line-height: 1.5;">
+                        Наш сервер работает строго по Белым Спискам (Вайтлисту)! Здесь тебя ждет ванильная анархия, хост на Ryzen, стабильные 20 ТПС и кастомный геймплей.
+                    </p>
+                </div>
+            </div>
+
         </div>
-
-        <!-- SUPER КАРТОЧКА -->
-        <div class="card">
-            <div class="card-icon">🔥</div>
-            <h3>SUPER</h3>
-            <div class="price">300₽ / мес</div>
-            <p>Увеличенный инвентарь, кастомные частицы вокруг тела и право на полет.</p>
-        </div>
-
-        <!-- SPECTRUM КАРТОЧКА -->
-        <div class="card">
-            <div class="card-icon">🌌</div>
-            <h3>SPECTRUM</h3>
-            <div class="price">990₽ / НАВСЕГДА</div>
-            <p>Статус Генерала. Своя кастомная пластинка, уникальный префикс и право карать чучел!</p>
-        </div>
-
     </div>
-</section>
 
-<!-- 🛠️ СКРИПТ НА INTERACTION И КОПИРОВАНИЕ (ЖИВОЙ JS) -->
+    <!-- ===================================================================== -->
+    <!-- 📝 СТРАНИЦА 2: РЕГИСТРАЦИЯ ПРЯМО НА САЙТЕ (ПОЛНЫЙ ТИТАНОВЫЙ ФИКС ФОRMЫ) -->
+    <!-- ===================================================================== -->
+    <div id="register" class="page">
+        <h1 class="title-neon" style="font-size: 36px; margin-bottom: 30px; text-align: center;">📝 Вход в Вайтлист сервера</h1>
+
+        <div class="card-custom" style="max-width: 700px; margin: 0 auto 25px auto; height: auto;">
+            <h2 style="color: #9933ff; margin-bottom: 20px; text-align: center;">📋 ЗАПОЛНИ АНКЕТУ РЕЗИДЕНТА:</h2>
+
+            <!-- 📡 ГЛАВНЫЙ ФИКС: ТЕГ ФОRMЫ НА СВОЁМ МЕСТЕ, ВСЕ 5 ИНПУТОВ И КНОПКА СТРОГО ВНУТРИ -->
+            <form id="whitelistForm" onsubmit="sendFormToKlara(event)">
+
+                <label class="input-label">👤 Ваше Имя и Фамилия:</label>
+                <input type="text" id="web_name" class="input-field" placeholder="Например: Иван Иванов" required>
+
+                <label class="input-label">🎓 Твой Класс:</label>
+                <input type="text" id="web_grade" class="input-field" placeholder="Пример: 11 Б (Если не из нашей школы, пиши строго | |)" required>
+
+                <label class="input-label">📅 День рождения:</label>
+                <input type="text" id="web_birthday" class="input-field" placeholder="Например: 15.06.2009" required>
+
+                <label class="input-label">🎮 Точный Ник в Майнкрафте:</label>
+                <input type="text" id="web_nickname" class="input-field" placeholder="Например: CoolPlayer_777" required>
+
+                <!-- 🔥 ЖЕКА-АПГРЕЙД: НОВОЕ ПОЛЕ ЮЗЕРНЕЙМА В ТЕЛЕГРАМЕ -->
+                <label class="input-label">📱 Твой Юзернейм (Ник) в Telegram:</label>
+                <input type="text" id="web_telegram" class="input-field" placeholder="Например: @ivan_legion" required>
+
+                <div style="text-align: center; margin-top: 10px;">
+                    <button type="submit" class="btn-action">🚀 Сформировать и отправить анкету</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ===================================================================== -->
+    <!-- 📜 СТРАНИЦА 3: ПРАВИЛА СЕРВЕРА -->
+    <!-- ===================================================================== -->
+    <div id="rules" class="page">
+        <h1 class="title-neon" style="font-size: 36px; margin-bottom: 30px; text-align: center;">📜 Свод Правил и Наказаний</h1>
+
+        <div class="card-custom" style="height: auto; margin-bottom: 25px;">
+            <h2 style="color: #ff3333; margin-bottom: 15px;">❌ 1. Использование читов и запрещённого софта</h2>
+            <p style="color: #cccccc; line-height: 1.6;">
+                Наказание: <b>Жесткий БАН по айпи, нику и/или устройству навсегда.</b><br>
+                В читы входят: Baritone, Meteor, Wurst, Aristois, LiquidBounce и т.д.<br>
+                Запрещённые моды: Freecam, Chest Stealer, X-Ray и ESP (любого рода).
+            </p>
+        </div>
+
+        <div class="card-custom" style="height: auto;">
+            <h2 style="color: #ff9933; margin-bottom: 15px;">❌ 2. Нарушения в чате и токсичность</h2>
+            <p style="color: #cccccc; line-height: 1.6;">
+                📌 Оскорбление родни / религии / нации — Предупреждение / БАН на 3 дня.<br>
+                📌 Разжигание ссор — МУТ 1 час инициатору / 30 минут второму.<br>
+                📌 Ссылки на читы или порнографию — МУТ 1 час.<br>
+                📌 Спам (от 3 сообщений подряд) — МУТ 30 минут.<br>
+                🤖 <i>Помните: бот в чате карает за запрещенку автоматически мутом на 7 дней!</i> <br>
+                <br>
+                ⚠️ <b>!!!Запомните: если чита нет в списке — не значит, что он "разрешен"!!!</b> <br>
+                ⚠️ <i><b>!!!Незнание правил не освобождает от ответственности!!!</b> </i>
+            </p>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- 📦 СТРАНИЦА 4: МОДЫ И ОТДЕЛЬНАЯ ПЛАШКА ПОД NETHERLEGION MOD.ZIP -->
+    <!-- ===================================================================== -->
+    <div id="mods" class="page">
+        <h1 class="title-neon" style="font-size: 36px; margin-bottom: 30px; text-align: center;">📦 Официальные Моды Легиона</h1>
+
+        <!-- КАРТОЧКА 1: NETHERLEGION MOD -->
+        <div class="card-custom" style="height: auto; margin-bottom: 25px; max-width: 850px; margin-left: auto; margin-right: auto;">
+            <h2 style="color: #9933ff;">🔥 netherLegion Mod</h2>
+            <p style="color: #cccccc; margin: 15px 0; line-height: 1.6;">
+                Официальный core-мод сервера. Добавляет нативные механики расширения незерита, элитные булавы и копья, у которых есть свои, уникальные кастомные функции. Такого нет ни в одной сборке мира!
+            </p>
+            <a href="https://modrinth.com/mod/nether-legion-mod" target="_blank" class="btn-action">🟢 Скачать на Modrinth</a>
+        </div>
+
+        <!-- КАРТОЧКА 2: СКАЧИВАНИЕ АРХИВА В ОТДЕЛЬНОМ НЕОНОВОМ КЕЙСЕ (ВМЕСТО РАДАРА) -->
+        <div class="card-custom" style="border-color: #9933ff; background: rgba(20, 5, 40, 0.4); height: auto; max-width: 850px; margin: 25px auto 0 auto;">
+            <h2 style="color: #ffffff; margin-bottom: 10px;">📦 Прямое скачивание ZIP-сборки</h2>
+            <!-- Твой кастомный текст-инструкция с экрана -->
+            <p style="color: #aaaaaa; font-size: 14px; line-height: 1.6; margin-bottom: 20px; font-style: italic; border-left: 2px solid #9933ff; padding-left: 15px; text-align: left;">
+                Этот вариант подойдет, если Modrinth не дает скачать моды. Он перекинет вас на диск, в котором будут все 6 модов (на самом деле их 2, просто они под разные ядра).
+            </p>
+            <!-- Кнопка скачивания ZIP-файла (Ссылку вставим в скриптах в 6 части!) -->
+            <a id="btn-google-archive" href="#" target="_blank" class="btn-action" style="background: linear-gradient(135deg, #220044, #4d0099); border: 1px solid #9933ff; display: inline-block;">📦 Скачать архив сборки</a>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- 💎 СТРАНИЦА 5: ДОНАТ ПРАЙС БЕЗ БЛЮРА -->
+    <!-- ===================================================================== -->
+    <div id="donate" class="page">
+        <h1 class="title-neon" style="font-size: 36px; margin-bottom: 30px; text-align: center;">💎 Донат и Привилегии</h1>
+
+        <div class="card-custom" style="height: auto; margin-bottom: 25px;">
+            <h3 style="margin-bottom: 20px; color: #9933ff;">💳 СПИСОК ДОСТУПНЫХ СТАТУСОВ:</h3>
+            <ul style="list-style: none; color: #cccccc; line-height: 2;">
+                <li>🔹 <b>VIP</b> — 100 руб. / месяц <span style="color: #9933ff;">или же</span> 1400 руб / НАВСЕГДА</li>
+                <li>🔹 <b>SUPER</b> — 250 руб. / месяц <span style="color: #9933ff;">или же</span> 1650 руб / НАВСЕГДА</li>
+                <li>👑 <b>SPECTRUM</b> — 400 руб. / месяц <span style="color: #9933ff;">или же</span> 2000 руб / НАВСЕГДА</li>
+                <li>👑 <b>SPECTRUM+</b> — 500 руб. / месяц <span style="color: #9933ff;">или же</span> 2250 руб / НАВСЕГДА</li>
+                <li>👑 <b>РАЗБАН</b> — 300 руб.
+            </ul>
+        </div>
+
+        <div class="card-custom" style="height: auto; margin-bottom: 25px;">
+            <h3>💳 ОПЛАТА НАПРЯМУЮ НА КАРТУ АДМИНИСТРАЦИИ:</h3>
+            <div class="ip-box" style="margin: 15px 0; font-size: 22px; color: #ffffff;">2202 2084 4078 7324</div>
+            <p style="color: #aaaaaa; font-size: 14px; line-height: 1.6;">
+                ⚠️ После оплаты обязательно скинь скриншот чека администрации через команду <b>/support</b> в нашем боте!<br>
+                💡 Вы также можете предложить свою крутую идею по донату (и не только) через команду <b>/idea</b>!
+            </p>
+        </div>
+
+        <div class="card-custom" style="border-color: #ff3333; background: rgba(30,0,0,0.3); height: auto;">
+            <p style="font-weight: bold; color: #ff3333; margin-bottom: 10px;">⚠️ ВАЖНОЕ ОБЪЯВЛЕНИЕ АДМИНИСТРАЦИИ:</p>
+            <div class="ip-box" style="background: transparent; border-color: #ff3333; color: #ff3333; font-family: inherit; font-size: 16px; padding: 15px; width: 100%; text-align: center; cursor: default;">
+                    <span>
+                        !!! P.S.: просим Вас пока что ничего не покупать, донаты еще не доделаны! !!!
+                    </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- 📦 СТРАНИЦА 6: СБОРКИ С ТВОИМИ ТЕКСТАМИ С ЭКРАНА -->
+    <!-- ===================================================================== -->
+    <div id="packs" class="page">
+        <h1 class="title-neon" style="font-size: 36px; margin-bottom: 30px; text-align: center;">📦 Рекомендуемые Сборки Легиона</h1>
+        <p style="color: #aaaaaa; margin-bottom: 30px; text-align: center;">Официальные майнкрафт-паки, лично собранные и оптимизированные администрацией Nether Legion.</p>
+
+        <div class="card-custom" style="height: auto; margin-bottom: 25px; max-width: 850px; margin-left: auto; margin-right: auto;">
+            <h2 style="color: #00cccc;">⚡ Лайт версия сборки (Ultra FPS)</h2>
+            <p style="color: #cccccc; margin: 15px 0; line-height: 1.6; text-align: left;">
+                Вариант строго для киберспорта и слабых ПК. Внутри есть только моды на оптимизацию.
+            </p>
+            <!-- Ссылку на Гугл Диск прикрутим в 6 части! -->
+            <a id="btn-google-light" href="#" target="_blank" class="btn-action" style="background: linear-gradient(135deg, #220044, #4d0099); border: 1px solid #9933ff; display: inline-block;">📦 Скачать Лайт архив</a>
+        </div>
+
+        <div class="card-custom" style="border-color: #9933ff; background: rgba(20, 5, 40, 0.4); height: auto; max-width: 850px; margin: 25px auto 0 auto;">
+            <h2 style="color: #ffffff; margin-bottom: 10px;">👑 Полная версия сборки (Full Legion Pack)</h2>
+            <p style="color: #cccccc; margin: 15px 0; line-height: 1.6; text-align: left;">
+                Максимальный люкс-вариант, который сделали и советуют сами админы! Включает в себя моды на оптимизацию, ресурспаки и шейдеры (от слабых до ультра реалистичных). Данная сборка является довольно требовательной!
+            </p>
+            <!-- Ссылку на Гугл Диск прикрутим в 6 части! -->
+            <a id="btn-google-full" href="#" target="_blank" class="btn-action" style="background: linear-gradient(135deg, #220044, #4d0099); border: 1px solid #9933ff; display: inline-block;">📦 Скачать Полный архив</a>
+        </div>
+    </div>
+</div> <!-- Конец main-wrapper -->
+
+<!-- ===================================================================== -->
+<!-- 📡 JAVASCRIPT-ДВИЖOК: ОФИЦИАЛЬНЫЙ ТИТАНОВЫЙ ДЕПЛОЙ АНКЕТ В ДИСКОРД -->
+<!-- ===================================================================== -->
 <script>
+    // Ссылки на твой прекрасный Гугл Диск для кнопок скачивания
+    const googleArchiveUrl = "https://drive.google.com/file/d/1ZWlsbgA5k2AqQ7bViaGGCtiIobipxqBr/view?usp=drive_link";
+    const googleLightUrl = "https://google.com";
+    const googleFullUrl = "https://google.com";
+
+    // Автоматически вшиваем ссылки Гугл Диска в кнопки при загрузке сайта
+    document.addEventListener("DOMContentLoaded", function() {
+        const btnArchive = document.getElementById("btn-google-archive");
+        const btnLight = document.getElementById("btn-google-light");
+        const btnFull = document.getElementById("btn-google-full");
+
+        if(btnArchive) btnArchive.href = googleArchiveUrl;
+        if(btnLight) btnLight.href = googleLightUrl;
+        if(btnFull) btnFull.href = googleFullUrl;
+    });
+
+    // 🛰️ DISCORD WEB_HOOK ENGINE: Прямая фоновая отправка анкеты с ТГ-юзернеймом
+    function sendFormToKlara(event) {
+        event.preventDefault(); // Тормозим перезагрузку формы
+
+        const name = document.getElementById('web_name').value;
+        const grade = document.getElementById('web_grade').value;
+        const birthday = document.getElementById('web_birthday').value;
+        const nickname = document.getElementById('web_nickname').value;
+        const telegram = document.getElementById('web_telegram').value; // Наш новый перехват ТГ никнейма!
+
+        // 🔑 ТВОЙ ЛИЧНЫЙ РАБОЧИЙ URL ВЕБХУКА ИЗ ДИСКОРДА НАМЕРТВО ВШИТ В ДВИЖОК!
+        const discordWebhookUrl = "https://discord.com/api/webhooks/1514614553449861402/Kn3d1-TUE7U4Vb1yaGkpBqlU8g-EMsP2Qc0Xodz7dAVrVg2gOPUyAuh8LKXNi8vWEj0m";
+
+        // 🪓 ЧИСТОКРОВНЫЙ ВАЛИДНЫЙ ПАКЕТ ДАННЫХ БЕЗ СИНТАКСИЧЕСКИХ ОШИБОК И ЛИШНИХ ЗВЕЗДОЧЕК
+        const payload = {
+            username: "Клара Веб-Регистратор",
+            avatar_url: "https://github.io",
+            embeds: [{
+                title: "🚨 НОВАЯ ВЕБ-АНКЕТА НА NETHERLEGION 🚨",
+                color: 10040319, // Фиолетовый неон плашки
+                fields: [
+                    { name: "👤 Имя/Фамилия:", value: name, inline: false },
+                    { name: "🎓 Класс:", value: grade, inline: false },
+                    { name: "📅 День рождения:", value: birthday, inline: false },
+                    { name: "🎮 Игровой ник в Minecraft:", value: "`" + nickname + "`", inline: false },
+                    { name: "📱 Юзернейм в Telegram:", value: "**" + telegram + "**", inline: false }
+                ],
+                footer: { text: "Отправлено напрямую через официальный сайт сервера" },
+                timestamp: new Date()
+            }]
+        };
+
+        // Запускаем скрытый асинхронный запрос к серверам Дискорда
+        fetch(discordWebhookUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+        .then(response => {
+            if (response.ok) {
+                alert("✅ Анкета успешно отправлена! Ожидайте вердикта администрации в течение дня!");
+                document.getElementById('whitelistForm').reset(); // Зачищаем форму до белизны
+            } else {
+                alert("❌ Ошибка отправки! Проверьте ссылку вебхука.");
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            alert("❌ Ошибка соединения с сервером Дискорда.");
+        });
+    }
+
+    // Функция моментального бесшовного переключения страниц и возврата анимации
+    function switchPage(pageId) {
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(page => {
+            page.classList.remove('active-page', 'animate-fade-in');
+        });
+
+        const buttons = document.querySelectorAll('.nav-btn');
+        buttons.forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        const bannerBlock = document.getElementById('home-banner-block');
+        if (pageId === 'home') {
+            bannerBlock.style.background = '#000000';
+            bannerBlock.style.display = 'block';
+        } else {
+            bannerBlock.style.display = 'none';
+        }
+
+        const targetPage = document.getElementById(pageId);
+        if (targetPage) {
+            targetPage.classList.add('active-page', 'animate-fade-in');
+            targetPage.style.animation = 'none';
+            targetPage.offsetHeight; // Сброс рефлоу Хрома
+            targetPage.style.animation = null;
+        }
+
+        const clickedBtn = DesertFindButtonByClick(pageId);
+        if (clickedBtn) clickedBtn.classList.add('active');
+    }
+
+    function DesertFindButtonByClick(id) {
+        const buttons = document.querySelectorAll('.nav-btn');
+        for (let btn of buttons) {
+            if (btn.getAttribute('onclick').includes(id)) return btn;
+        }
+        return null;
+    }
+
     function copyIP() {
-        // В кавычки впиши будущий реальный IP сервера!
-        const ip = "play.netherlegion.ru";
-        navigator.clipboard.writeText(ip).then(() => {
-            alert("🚀 IP сервера NetherLegion успешно скопирован в буфер обмена! Ждем тебя в игре!");
+        const ipText = "play.netherlegion.ru";
+        navigator.clipboard.writeText(ipText).then(() => {
+            const status = document.getElementById('copy-status');
+            status.style.display = 'block';
+            setTimeout(() => {
+                status.style.display = 'none';
+            }, 3000);
         }).catch(err => {
-            console.error("Ошибка копирования: ", err);
+            console.error('Не удалось скопировать IP: ', err);
         });
     }
 </script>
