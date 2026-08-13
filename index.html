@@ -290,11 +290,10 @@
 
 <div class="main-wrapper">
     <!-- ===================================================================== -->
-    <!-- 🏠 СТРАНИЦА 1: ГЛАВНАЯ (ПЛАШКИ КНОПОК ОПУЩЕНЫ НА -380PX СТРОГО ПОД БУКВЫ) -->
+    <!-- 🏠 СТРАНИЦА 1: ГЛАВНАЯ  -->
     <!-- ===================================================================== -->
     <div id="home" class="page active-page animate-fade-in">
 
-        <!-- 📐 СЕТКА ЖЕКИ: ПЛАШКА С КНОПКОЙ IP СЛЕВА, ПРИВЕТСТВИЕ СПРАВА ПОД БУКВАМИ -->
         <div class="top-grid-sections">
 
             <!-- Левая плашка: Копирование IP -->
@@ -306,12 +305,12 @@
                 </div>
             </div>
 
-            <!-- Правая плашка: Добро пожаловать в Легион -->
+            
             <div class="grid-right-side">
                 <div class="card-custom" style="text-align: left;">
                     <h3 style="font-size: 18px; color: #9933ff;">🔷 ДОБРО ПОЖАЛОВАТЬ В ЛЕГИОН!</h3>
                     <p style="color: #cccccc; margin-top: 10px; font-size: 14px; line-height: 1.5;">
-                        Наш сервер работает строго по Белым Спискам (Вайтлисту)! Здесь тебя ждет ванильная анархия, хост на Ryzen, стабильные 20 ТПС и кастомный геймплей.
+                        Наш сервер работает строго по Белым Спискам (Вайтлисту)! Здесь тебя ждет ванильная анархия и кастомный геймплей.
                     </p>
                 </div>
             </div>
@@ -320,7 +319,7 @@
     </div>
 
     <!-- ===================================================================== -->
-    <!-- 📝 СТРАНИЦА 2: РЕГИСТРАЦИЯ ПРЯМО НА САЙТЕ (ПОЛНЫЙ ТИТАНОВЫЙ ФИКС ФОRMЫ) -->
+    <!-- 📝 СТРАНИЦА 2: РЕГИСТРАЦИЯ ПРЯМО НА САЙТЕ -->
     <!-- ===================================================================== -->
     <div id="register" class="page">
         <h1 class="title-neon" style="font-size: 36px; margin-bottom: 30px; text-align: center;">📝 Вход в Вайтлист сервера</h1>
@@ -328,7 +327,6 @@
         <div class="card-custom" style="max-width: 700px; margin: 0 auto 25px auto; height: auto;">
             <h2 style="color: #9933ff; margin-bottom: 20px; text-align: center;">📋 ЗАПОЛНИ АНКЕТУ РЕЗИДЕНТА:</h2>
 
-            <!-- 📡 ГЛАВНЫЙ ФИКС: ТЕГ ФОRMЫ НА СВОЁМ МЕСТЕ, ВСЕ 5 ИНПУТОВ И КНОПКА СТРОГО ВНУТРИ -->
             <form id="whitelistForm" onsubmit="sendFormToKlara(event)">
 
                 <label class="input-label">👤 Ваше Имя и Фамилия:</label>
@@ -384,7 +382,7 @@
     </div>
 
     <!-- ===================================================================== -->
-    <!-- 📦 СТРАНИЦА 4: МОДЫ И ОТДЕЛЬНАЯ ПЛАШКА ПОД NETHERLEGION MOD.ZIP -->
+    <!-- 📦 СТРАНИЦА 4: МОДЫ  -->
     <!-- ===================================================================== -->
     <div id="mods" class="page">
         <h1 class="title-neon" style="font-size: 36px; margin-bottom: 30px; text-align: center;">📦 Официальные Моды Легиона</h1>
@@ -411,7 +409,7 @@
     </div>
 
     <!-- ===================================================================== -->
-    <!-- 💎 СТРАНИЦА 5: ДОНАТ ПРАЙС БЕЗ БЛЮРА -->
+    <!-- 💎 СТРАНИЦА 5: ДОНАТ  -->
     <!-- ===================================================================== -->
     <div id="donate" class="page">
         <h1 class="title-neon" style="font-size: 36px; margin-bottom: 30px; text-align: center;">💎 Донат и Привилегии</h1>
@@ -429,9 +427,9 @@
 
         <div class="card-custom" style="height: auto; margin-bottom: 25px;">
             <h3>💳 ОПЛАТА НАПРЯМУЮ НА КАРТУ АДМИНИСТРАЦИИ:</h3>
-            <div class="ip-box" style="margin: 15px 0; font-size: 22px; color: #ffffff;">2202 2084 4078 7324</div>
+            <div class="ip-box" style="margin: 15px 0; font-size: 22px; color: #ffffff;">0000 0000 0000 0000</div>
             <p style="color: #aaaaaa; font-size: 14px; line-height: 1.6;">
-                ⚠️ После оплаты обязательно скинь скриншот чека администрации через команду <b>/support</b> в нашем боте!<br>
+                ⚠️ После оплаты обязательно скинь скриншот чека администрации <b>в Telegram по юзернеймам @PotniyZirobas или @xcvksup</b>!<br>
                 💡 Вы также можете предложить свою крутую идею по донату (и не только) через команду <b>/idea</b>!
             </p>
         </div>
@@ -447,7 +445,7 @@
     </div>
 
     <!-- ===================================================================== -->
-    <!-- 📦 СТРАНИЦА 6: СБОРКИ С ТВОИМИ ТЕКСТАМИ С ЭКРАНА -->
+    <!-- 📦 СТРАНИЦА 6: СБОРКИ С ТЕКСТАМИ С ЭКРАНА -->
     <!-- ===================================================================== -->
     <div id="packs" class="page">
         <h1 class="title-neon" style="font-size: 36px; margin-bottom: 30px; text-align: center;">📦 Рекомендуемые Сборки Легиона</h1>
@@ -474,7 +472,7 @@
 </div> <!-- Конец main-wrapper -->
 
 <!-- ===================================================================== -->
-<!-- 📡 JAVASCRIPT-ДВИЖOК: ОФИЦИАЛЬНЫЙ ТИТАНОВЫЙ ДЕПЛОЙ АНКЕТ В ДИСКОРД -->
+<!-- 📡 JAVASCRIPT-ДВИЖOК -->
 <!-- ===================================================================== -->
 <script>
     // Ссылки на твой прекрасный Гугл Диск для кнопок скачивания
@@ -482,7 +480,7 @@
     const googleLightUrl = "https://google.com";
     const googleFullUrl = "https://google.com";
 
-    // Автоматически вшиваем ссылки Гугл Диска в кнопки при загрузке сайта
+    
     document.addEventListener("DOMContentLoaded", function() {
         const btnArchive = document.getElementById("btn-google-archive");
         const btnLight = document.getElementById("btn-google-light");
@@ -493,7 +491,7 @@
         if(btnFull) btnFull.href = googleFullUrl;
     });
 
-    // 🛰️ DISCORD WEB_HOOK ENGINE: Прямая фоновая отправка анкеты с ТГ-юзернеймом
+    
     function sendFormToKlara(event) {
         event.preventDefault(); // Тормозим перезагрузку формы
 
@@ -501,12 +499,12 @@
         const grade = document.getElementById('web_grade').value;
         const birthday = document.getElementById('web_birthday').value;
         const nickname = document.getElementById('web_nickname').value;
-        const telegram = document.getElementById('web_telegram').value; // Наш новый перехват ТГ никнейма!
+        const telegram = document.getElementById('web_telegram').value; 
 
-        // 🔑 ТВОЙ ЛИЧНЫЙ РАБОЧИЙ URL ВЕБХУКА ИЗ ДИСКОРДА НАМЕРТВО ВШИТ В ДВИЖОК!
+        
         const discordWebhookUrl = "https://discord.com/api/webhooks/1514614553449861402/Kn3d1-TUE7U4Vb1yaGkpBqlU8g-EMsP2Qc0Xodz7dAVrVg2gOPUyAuh8LKXNi8vWEj0m";
 
-        // 🪓 ЧИСТОКРОВНЫЙ ВАЛИДНЫЙ ПАКЕТ ДАННЫХ БЕЗ СИНТАКСИЧЕСКИХ ОШИБОК И ЛИШНИХ ЗВЕЗДОЧЕК
+        
         const payload = {
             username: "Клара Веб-Регистратор",
             avatar_url: "https://github.io",
@@ -525,7 +523,7 @@
             }]
         };
 
-        // Запускаем скрытый асинхронный запрос к серверам Дискорда
+        
         fetch(discordWebhookUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -545,7 +543,7 @@
         });
     }
 
-    // Функция моментального бесшовного переключения страниц и возврата анимации
+    
     function switchPage(pageId) {
         const pages = document.querySelectorAll('.page');
         pages.forEach(page => {
