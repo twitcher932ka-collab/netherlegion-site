@@ -346,8 +346,9 @@
                 <input type="text" id="web_telegram" class="input-field" placeholder="Например: @ivan_zolo" required>
 
                 <div style="text-align: center; margin-top: 10px;">
-                    <button type="submit" class="btn-action">🚀 Сформировать и отправить анкету</button>
+                    <button type="submit" id="submit-btn" class="btn-action">🚀 Сформировать и отправить анкету</button>
                 </div>
+
             </form>
         </div>
     </div>
@@ -503,7 +504,10 @@
 
     
     function sendFormToKlara(event) {
-        event.preventDefault(); // Тормозим перезагрузку формы
+        event.preventDefault();
+
+        const submitBtn = document.getElementById('submit-btn');
+        if (submitBtn && submitBtn.disabled) return;
 
         const name = document.getElementById('web_name').value;
         const grade = document.getElementById('web_grade').value;
@@ -513,9 +517,8 @@
 
         
         
-        const part1 = "https://discord.com";
+        const part1 = "https://discord.com/api/webhooks/1540045449090695188/";
         const part2 = "vsSzxaNtChOgam1Iqbr4W3e2BlM0zva0sA5YFivjvQHFolXY_Nbb0mxhUqgIsxUCj43Y";
-
         const discordWebhookUrl = part1 + part2;
 
 
