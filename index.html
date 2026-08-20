@@ -322,37 +322,35 @@
     <!-- 📝 СТРАНИЦА 2: РЕГИСТРАЦИЯ ПРЯМО НА САЙТЕ -->
     <!-- ===================================================================== -->
     <div id="register" class="page">
-    <h1 class="title-neon" style="font-size: 36px; margin-bottom: 30px; text-align: center;">📜 Вход в Вайтлист сервера</h1>
+        <h1 class="title-neon" style="font-size: 36px; margin-bottom: 30px; text-align: center;">📝 Вход в Вайтлист сервера</h1>
 
-    <div class="card-custom" style="max-width: 700px; margin: 0 auto 25px auto; height: auto;">
-        <h2 style="color: #9933ff; margin-bottom: 20px; text-align: center;">🗺️ ЗАПОЛНИ АНКЕТУ:</h2>
+        <div class="card-custom" style="max-width: 700px; margin: 0 auto 25px auto; height: auto;">
+            <h2 style="color: #9933ff; margin-bottom: 20px; text-align: center;">📋 ЗАПОЛНИ АНКЕТУ:</h2>
 
-        <form id="whitelistForm" onsubmit="sendFormToKlara(event)">
+            <form id="whitelistForm" onsubmit="sendFormToKlara(event)">
 
-            <label class="input-label">👤 Ваше Имя и Фамилия (чтобы понимать, как к Вам обращаться):</label>
-            <input type="text" id="web_name" class="input-field" placeholder="Например: Иван Золочевский" required>
+                <label class="input-label">👤 Ваше Имя и Фамилия (чтобы понимать, как к Вам оброщаться):</label>
+                <input type="text" id="web_name" class="input-field" placeholder="Например: Иван Золочевский" required>
 
-            <label class="input-label">🏫 Твой Класс (чтобы знать, откуда ты):</label>
-            <input type="text" id="web_grade" class="input-field" placeholder="Пример: 11 Б (Если не из нашей школы, пиши строго | )" required>
+                <label class="input-label">🎓 Твой Класс (чтобы знать, откуда ты):</label>
+                <input type="text" id="web_grade" class="input-field" placeholder="Пример: 11 Б (Если не из нашей школы, пиши строго | |)" required>
 
-            <label class="input-label">🎂 День рождения (чтобы поздравлять):</label>
-            <input type="text" id="web_birthday" class="input-field" placeholder="Например: 15.06.2009" required>
+                <label class="input-label">📅 День рождения (чтобы поздравлять):</label>
+                <input type="text" id="web_birthday" class="input-field" placeholder="Например: 15.06.2009" required>
 
-            <label class="input-label">🎮 Точный Ник в Майнкрафте (для внесения в Белый Список):</label>
-            <input type="text" id="web_nickname" class="input-field" placeholder="Например: CoolPlayer_777" required>
+                <label class="input-label">🎮 Точный Ник в Майнкрафте (для внесения в Белый Список):</label>
+                <input type="text" id="web_nickname" class="input-field" placeholder="Например: CoolPlayer_777" required>
 
-            <label class="input-label">📱 Твой Юзернейм (Ник) в Telegram (для связи):</label>
-            <input type="text" id="web_telegram" class="input-field" placeholder="Например: @ivan_zolo" required>
+                <!-- 🔥 ЖЕКА-АПГРЕЙД: НОВОЕ ПОЛЕ ЮЗЕРНЕЙМА В ТЕЛЕГРАМЕ -->
+                <label class="input-label">📱 Твой Юзернейм (Ник) в Telegram (для связи):</label>
+                <input type="text" id="web_telegram" class="input-field" placeholder="Например: @ivan_zolo" required>
 
-            <div style="text-align: center; margin-top: 10px;">
-                <!-- Убрали onclick, добавили id="submitBtn" -->
-                <button type="submit" id="submitBtn" class="btn-action">🚀 Сформировать и отправить анкету</button>
-            </div>
-
-        </form>
+                <div style="text-align: center; margin-top: 10px;">
+                    <button type="submit" class="btn-action">🚀 Сформировать и отправить анкету</button>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-
     <!-- ===================================================================== -->
     <!-- 📜 СТРАНИЦА 3: ПРАВИЛА СЕРВЕРА -->
     <!-- ===================================================================== -->
@@ -505,63 +503,55 @@
 
     
     function sendFormToKlara(event) {
-    event.preventDefault(); // Тормозим перезагрузку формы
+        event.preventDefault(); // Тормозим перезагрузку формы
 
-    // 1. НАХОДИМ И БЛОКИРУЕМ КНОПКУ СРАЗУ ПОСЛЕ НАЖАТИЯ
-    const btn = document.getElementById('submitBtn');
-    if (btn) btn.disabled = true;
+        const name = document.getElementById('web_name').value;
+        const grade = document.getElementById('web_grade').value;
+        const birthday = document.getElementById('web_birthday').value;
+        const nickname = document.getElementById('web_nickname').value;
+        const telegram = document.getElementById('web_telegram').value; 
 
-    const name = document.getElementById('web_name').value;
-    const grade = document.getElementById('web_grade').value;
-    const birthday = document.getElementById('web_birthday').value;
-    const nickname = document.getElementById('web_nickname').value;
-    const telegram = document.getElementById('web_telegram').value; 
+        
+        const discordWebhookUrl = "https://discord.com/api/webhooks/1540045449090695188/vsSzxaNtChOgam1Iqbr4W3e2BlM0zva0sA5YFivjvQHFolXY_Nbb0mxhUqgIsxUCj43Y";
 
-    const discordWebhookUrl = "https://discord.com/api/webhooks/1540045449090695188/vsSzxaNtChOgam1Iqbr4W3e2BlM0zva0sA5YFivjvQHFolXY_Nbb0mxhUqgIsxUCj43Y";
+        
+        const payload = {
+            username: "Регистратор",
+            avatar_url: "https://github.io",
+            embeds: [{
+                title: "🚨 НОВАЯ АНКЕТА НА NETHERLEGION 🚨",
+                color: 10040319, // Фиолетовый неон плашки
+                fields: [
+                    { name: "👤 Имя/Фамилия:", value: name, inline: false },
+                    { name: "🎓 Класс:", value: grade, inline: false },
+                    { name: "📅 День рождения:", value: birthday, inline: false },
+                    { name: "🎮 Ник в Minecraft:", value: "`" + nickname + "`", inline: false },
+                    { name: "📱 Юзернейм в Telegram:", value: "**" + telegram + "**", inline: false }
+                ],
+                footer: { text: "Отправлено через официальный сайт сервера" },
+                timestamp: new Date()
+            }]
+        };
 
-    const payload = {
-        username: "Регистратор",
-        avatar_url: "https://github.io",
-        embeds: [{
-            title: "🚨 НОВАЯ АНКЕТА НА NETHERLEGION 🚨",
-            color: 10040319, // Фиолетовый неон плашки
-            fields: [
-                { name: "👤 Имя/Фамилия:", value: name, inline: false },
-                { name: "🎓 Класс:", value: grade, inline: false },
-                { name: "📅 День рождения:", value: birthday, inline: false },
-                { name: "🎮 Ник в Minecraft:", value: "`" + nickname + "`", inline: false },
-                { name: "📱 Юзернейм в Telegram:", value: "**" + telegram + "**", inline: false }
-            ],
-            footer: { text: "Отправлено через официальный сайт сервера" },
-            timestamp: new Date()
-        }]
-    };
-
-    fetch(discordWebhookUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-    })
-    .then(response => {
-        if (response.ok) {
-            alert("✅ Анкета успешно отправлена! Ожидайте вердикта администрации в течение 3 дней! Вам обязательно напишут в Телеграм.");
-            document.getElementById('whitelistForm').reset(); // Зачищаем форму до белизны
-        } else {
-            alert("❌ Ошибка отправки! Проверьте ссылку вебхука.");
-        }
-    })
-    .catch(err => {
-        console.error(err);
-        alert("❌ Ошибка соединения с сервером Дискорда.");
-    })
-    .finally(() => {
-        // 2. Включаем таймер ровно на 20 секунд (20000 мс) перед разблокировкой.
-        // Блок finally сработает в любом случае: и при успешной отправке, и при ошибке.
-        setTimeout(() => {
-            if (btn) btn.disabled = false;
-        }, 20000);
-    });
-}
+        
+        fetch(discordWebhookUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+        .then(response => {
+            if (response.ok) {
+                alert("✅ Анкета успешно отправлена! Ожидайте вердикта администрации в течение 3 дней! Вам обязательно напишут в Телеграм.");
+                document.getElementById('whitelistForm').reset(); // Зачищаем форму до белизны
+            } else {
+                alert("❌ Ошибка отправки! Проверьте ссылку вебхука.");
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            alert("❌ Ошибка соединения с сервером Дискорда.");
+        });
+    }
 
     
     function switchPage(pageId) {
