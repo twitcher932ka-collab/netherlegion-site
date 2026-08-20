@@ -486,10 +486,11 @@
 <!-- ===================================================================== -->
 <script>
     // Ссылки на твой прекрасный Гугл Диск для кнопок скачивания
-    const googleArchiveUrl = "https://google.com";
+    const googleArchiveUrl = "https://drive.google.com/file/d/1ZWlsbgA5k2AqQ7bViaGGCtiIobipxqBr/view?usp=drive_link";
     const googleLightUrl = "https://google.com";
     const googleFullUrl = "https://google.com";
 
+    
     document.addEventListener("DOMContentLoaded", function() {
         const btnArchive = document.getElementById("btn-google-archive");
         const btnLight = document.getElementById("btn-google-light");
@@ -500,6 +501,7 @@
         if(btnFull) btnFull.href = googleFullUrl;
     });
 
+    
     function sendFormToKlara(event) {
         event.preventDefault(); // Тормозим перезагрузку формы
 
@@ -509,12 +511,15 @@
         const nickname = document.getElementById('web_nickname').value;
         const telegram = document.getElementById('web_telegram').value; 
 
-        // Твой вебхук, разбитый на безопасные части, которые понимает браузер
+        
+        
         const part1 = "https://discord.com";
-        const part2 = "w6qfYSUh1oErj7BI0PIflslr4Mno1OvrnAuzknhFbc7LVMKEmSac3GD7dJw";
-        const part3 = "cmomL5oF3";
-        const discordWebhookUrl = part1 + part2 + part3;
+        const part2 = "vsSzxaNtChOgam1Iqbr4W3e2BlM0zva0sA5YFivjvQHFolXY_Nbb0mxhUqgIsxUCj43Y";
 
+        const discordWebhookUrl = part1 + part2;
+
+
+        
         const payload = {
             username: "Регистратор",
             avatar_url: "https://github.io",
@@ -533,6 +538,7 @@
             }]
         };
 
+        
         fetch(discordWebhookUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -552,6 +558,7 @@
         });
     }
 
+    
     function switchPage(pageId) {
         const pages = document.querySelectorAll('.page');
         pages.forEach(page => {
