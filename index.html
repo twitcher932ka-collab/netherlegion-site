@@ -346,7 +346,7 @@
                 <input type="text" id="web_telegram" class="input-field" placeholder="Например: @ivan_zolo" required>
 
                 <div style="text-align: center; margin-top: 10px;">
-                    <button type="submit" id="submit-btn" class="btn-action">🚀 Сформировать и отправить анкету</button>
+                    <button type="submit" onclick="this.disabled = true; setTimeout(() => this.disabled = false, 20000);" class="btn-action">🚀 Сформировать и отправить анкету</button>
                 </div>
 
             </form>
