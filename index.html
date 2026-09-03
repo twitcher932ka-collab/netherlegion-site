@@ -310,7 +310,7 @@
                 <div class="card-custom" style="text-align: left;">
                     <h3 style="font-size: 18px; color: #9933ff;">🔷 ДОБРО ПОЖАЛОВАТЬ НА СЕРВЕР!</h3>
                     <p style="color: #cccccc; margin-top: 10px; font-size: 14px; line-height: 1.5;">
-                        Наш сервер работает строго по Белым Спискам (Вайтлисту)! Здесь тебя ждет ванильная анархия и кастомный геймплей. Перед началом игры просим ознакомиться с правилами и зарегистрироваться.
+                        Наш сервер работает строго по Белым Спискам (Вайтлисту)! Здесь тебя ждет ванилла+ и кастомный геймплей. Перед началом игры просим ознакомиться с правилами и зарегистрироваться.
                     </p>
                 </div>
             </div>
@@ -351,6 +351,14 @@
             </form>
         </div>
     </div>
+    <div class="card-custom" style="border-color: #ff3333; background: rgba(30,0,0,0.3); height: auto;">
+            <p style="font-weight: bold; color: #ff3333; margin-bottom: 10px;">⚠️ ВАЖНОЕ ОБЪЯВЛЕНИЕ АДМИНИСТРАЦИИ:</p>
+            <div class="ip-box" style="background: transparent; border-color: #ff3333; color: #ff3333; font-family: inherit; font-size: 16px; padding: 15px; width: 100%; text-align: center; cursor: default;">
+                    <span>
+                        !!! P.S.: просим Вас пока что писать в телеграм (<div class="ip-box" onclick="copyIP()">@NetherLegion_Support</div>), так как в данный момент сервер НЕ посылает анкеты в связи с мерами безопасности! Спасибо за понимание! !!!
+                    </span>
+            </div>
+        </div>
     <!-- ===================================================================== -->
     <!-- 📜 СТРАНИЦА 3: ПРАВИЛА СЕРВЕРА -->
     <!-- ===================================================================== -->
@@ -512,7 +520,7 @@
         const telegram = document.getElementById('web_telegram').value; 
 
         
-        const discordWebhookUrl = "https://discord.com/api/webhooks/1540045449090695188/vsSzxaNtChOgam1Iqbr4W3e2BlM0zva0sA5YFivjvQHFolXY_Nbb0mxhUqgIsxUCj43Y";
+        const discordWebhookUrl = "";
 
         
         const payload = {
@@ -544,12 +552,12 @@
                 alert("✅ Анкета успешно отправлена! Ожидайте вердикта администрации в течение 3 дней! Вам обязательно напишут в Телеграм.");
                 document.getElementById('whitelistForm').reset(); // Зачищаем форму до белизны
             } else {
-                alert("❌ Ошибка отправки! Проверьте ссылку вебхука.");
+                alert("❌ Извините! Пока что не работает.");
             }
         })
         .catch(err => {
             console.error(err);
-            alert("❌ Ошибка соединения с сервером Дискорда.");
+            alert("❌ Ошибка соединения с сервером Дискорда в связи с тем, что еще не закончено.");
         });
     }
 
