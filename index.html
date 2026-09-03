@@ -331,7 +331,7 @@
             <form id="whitelistForm" onsubmit="sendFormToKlara(event)">
 
                 <label class="input-label">👤 Ваше Имя и Фамилия (чтобы понимать, как к Вам оброщаться):</label>
-                <input type="text" id="web_name" class="input-field" placeholder="Например: Иван Золочевский" required>
+                <input type="text" id="web_name" class="input-field" placeholder="Например: Иван " required>
 
                 <label class="input-label">🎓 Твой Класс (чтобы знать, откуда ты):</label>
                 <input type="text" id="web_grade" class="input-field" placeholder="Пример: 11 Б (Если не из нашей школы, пиши строго | |)" required>
@@ -342,9 +342,8 @@
                 <label class="input-label">🎮 Точный Ник в Майнкрафте (для внесения в Белый Список):</label>
                 <input type="text" id="web_nickname" class="input-field" placeholder="Например: CoolPlayer_777" required>
 
-                <!-- 🔥 ЖЕКА-АПГРЕЙД: НОВОЕ ПОЛЕ ЮЗЕРНЕЙМА В ТЕЛЕГРАМЕ -->
                 <label class="input-label">📱 Твой Юзернейм (Ник) в Telegram (для связи):</label>
-                <input type="text" id="web_telegram" class="input-field" placeholder="Например: @ivan_zolo" required>
+                <input type="text" id="web_telegram" class="input-field" placeholder="Например: @ivan_legion123" required>
 
                 <div style="text-align: center; margin-top: 10px;">
                     <button type="submit" class="btn-action">🚀 Сформировать и отправить анкету</button>
@@ -406,14 +405,11 @@
             <a href="https://modrinth.com/mod/nether-legion-mod" target="_blank" class="btn-action">🟢 Скачать на Modrinth</a>
         </div>
 
-        <!-- КАРТОЧКА 2: СКАЧИВАНИЕ АРХИВА В ОТДЕЛЬНОМ НЕОНОВОМ КЕЙСЕ (ВМЕСТО РАДАРА) -->
         <div class="card-custom" style="border-color: #9933ff; background: rgba(20, 5, 40, 0.4); height: auto; max-width: 850px; margin: 25px auto 0 auto;">
             <h2 style="color: #ffffff; margin-bottom: 10px;">📦 Прямое скачивание ZIP-сборки</h2>
-            <!-- Твой кастомный текст-инструкция с экрана -->
             <p style="color: #aaaaaa; font-size: 14px; line-height: 1.6; margin-bottom: 20px; font-style: italic; border-left: 2px solid #9933ff; padding-left: 15px; text-align: left;">
                 Этот вариант подойдет, если Modrinth не дает скачать моды. Он перекинет вас на диск, в котором будут все 2 мода.
             </p>
-            <!-- Кнопка скачивания ZIP-файла (Ссылку вставим в скриптах в 6 части!) -->
             <a id="btn-google-archive" href="#" target="_blank" class="btn-action" style="background: linear-gradient(135deg, #220044, #4d0099); border: 1px solid #9933ff; display: inline-block;">📦 Скачать архив сборки</a>
         </div>
     </div>
@@ -475,8 +471,7 @@
             <p style="color: #cccccc; margin: 15px 0; line-height: 1.6; text-align: left;">
                 Вариант строго для киберспорта и слабых ПК. Внутри есть только моды на оптимизацию.
             </p>
-            <!-- Ссылку на Гугл Диск прикрутим в 6 части! -->
-            <a id="btn-google-light" href="#" target="_blank" class="btn-action" style="background: linear-gradient(135deg, #220044, #4d0099); border: 1px solid #9933ff; display: inline-block;">📦 Скачать Лайт архив</a>
+            <a id="btn-google-lite" href="#" target="_blank" class="btn-action" style="background: linear-gradient(135deg, #220044, #4d0099); border: 1px solid #9933ff; display: inline-block;">📦 Скачать Лайт архив</a>
         </div>
 
         <div class="card-custom" style="border-color: #9933ff; background: rgba(20, 5, 40, 0.4); height: auto; max-width: 850px; margin: 25px auto 0 auto;">
@@ -484,11 +479,10 @@
             <p style="color: #cccccc; margin: 15px 0; line-height: 1.6; text-align: left;">
                 Максимально красивый вариант, который сделали и советуют сами админы! Включает в себя моды на оптимизацию, ресурспаки и шейдеры (от слабых до реалистичных). Данная сборка является довольно требовательной!
             </p>
-            <!-- Ссылку на Гугл Диск прикрутим в 6 части! -->
             <a id="btn-google-full" href="#" target="_blank" class="btn-action" style="background: linear-gradient(135deg, #220044, #4d0099); border: 1px solid #9933ff; display: inline-block;">📦 Скачать Полный архив</a>
         </div>
     </div>
-</div> <!-- Конец main-wrapper -->
+</div> 
 
 <!-- ===================================================================== -->
 <!-- 📡 JAVASCRIPT-ДВИЖOК -->
@@ -496,17 +490,17 @@
 <script>
     // Ссылки на твой прекрасный Гугл Диск для кнопок скачивания
     const googleArchiveUrl = "https://drive.google.com/file/d/1ZWlsbgA5k2AqQ7bViaGGCtiIobipxqBr/view?usp=drive_link";
-    const googleLightUrl = "https://google.com";
+    const googleLitetUrl = "https://google.com";
     const googleFullUrl = "https://google.com";
 
     
     document.addEventListener("DOMContentLoaded", function() {
         const btnArchive = document.getElementById("btn-google-archive");
-        const btnLight = document.getElementById("btn-google-light");
+        const btnLite = document.getElementById("btn-google-lite");
         const btnFull = document.getElementById("btn-google-full");
 
         if(btnArchive) btnArchive.href = googleArchiveUrl;
-        if(btnLight) btnLight.href = googleLightUrl;
+        if(btnLite) btnLite.href = googleLiteUrl;
         if(btnFull) btnFull.href = googleFullUrl;
     });
 
