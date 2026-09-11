@@ -545,7 +545,7 @@
         .then(response => {
             if (response.ok) {
                 alert("✅ Анкета успешно отправлена! Ожидайте вердикта администрации в течение 3 дней! Вам обязательно напишут в Телеграм.");
-                document.getElementById('whitelistForm').reset(); // Зачищаем форму до белизны
+                document.getElementById('whitelistForm').reset(); 
             } else {
                 alert("❌ Извините! Пока что не работает.");
             }
@@ -580,7 +580,7 @@
         if (targetPage) {
             targetPage.classList.add('active-page', 'animate-fade-in');
             targetPage.style.animation = 'none';
-            targetPage.offsetHeight; // Сброс рефлоу Хрома
+            targetPage.offsetHeight; 
             targetPage.style.animation = null;
         }
 
