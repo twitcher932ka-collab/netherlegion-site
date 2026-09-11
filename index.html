@@ -63,7 +63,7 @@
             }
         }
 
-        /* 📱 ШАПКА И НАВИГАЦИЯ ПО ОТДЕЛЬНЫМ СТРАНИЦАМ */
+        
         header {
             background: rgba(10, 0, 20, 0.8);
             backdrop-filter: blur(10px);
@@ -75,7 +75,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            animation: fadeInScale 0.5s ease-out;
+  `          animation: fadeInScale 0.5s ease-out;
         }
 
         .logo-section {
@@ -263,7 +263,7 @@
 </head>
 <body>
 
-<!-- 📱 НАВИГАЦИОННАЯ ШАПКА ИМПЕРИИ -->
+ 
 <header>
     <div class="logo-section">
         <img src="favicon.png" alt="NL">
@@ -279,9 +279,8 @@
     </nav>
 </header>
 
-<!-- 🔥 БЛОК ТВОЕГО БАННЕРA 1920х1080 НА ВЕСЬ ЭКРАН -->
 <div id="home-banner-block" class="full-screen-banner" style="position: relative;">
-    <!--  ПОДЗАГОЛОВОК ПАРИТ СТРОГО НА САМОМ ВЕРХУ НАД БУКВАМИ -->
+    
     <p id="top-title-text" style="position: absolute; width: 100%; top: 120px; left: 0; color: #aaaaaa; font-size: 16px; text-align: center; z-index: 100; font-weight: bold; letter-spacing: 1px; text-shadow: 0 0 10px rgba(0,0,0,0.9); animation: slideInLeft 0.7s ease-out;">
         Школьный (и не только) SMP сервер. 
     </p>
@@ -296,7 +295,7 @@
 
         <div class="top-grid-sections">
 
-            <!-- Левая плашка: Копирование IP -->
+            
             <div class="grid-left-side">
                 <div class="card-custom">
                     <p style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">👇 НАЖМИ ДЛЯ КОПИРОВАНИЯ IP 👇  </p>
@@ -396,7 +395,7 @@
     <div id="mods" class="page">
         <h1 class="title-neon" style="font-size: 36px; margin-bottom: 30px; text-align: center;">📦 Официальные Моды</h1>
 
-        <!-- КАРТОЧКА 1: NETHERLEGION MOD -->
+        
         <div class="card-custom" style="height: auto; margin-bottom: 25px; max-width: 850px; margin-left: auto; margin-right: auto;">
             <h2 style="color: #9933ff;">🔥 netherLegion Mod</h2>
             <p style="color: #cccccc; margin: 15px 0; line-height: 1.6;">
@@ -488,7 +487,7 @@
 <!-- 📡 JAVASCRIPT-ДВИЖOК -->
 <!-- ===================================================================== -->
 <script>
-    // Ссылки на твой прекрасный Гугл Диск для кнопок скачивания
+    // Ссылки на Гугл Диск для кнопок скачивания
     const googleArchiveUrl = "https://drive.google.com/file/d/1ZWlsbgA5k2AqQ7bViaGGCtiIobipxqBr/view?usp=drive_link";
     const googleLitetUrl = "https://google.com";
     const googleFullUrl = "https://google.com";
@@ -506,7 +505,7 @@
 
     
     function sendFormToKlara(event) {
-        event.preventDefault(); // Тормозим перезагрузку формы
+        event.preventDefault(); 
 
         const name = document.getElementById('web_name').value;
         const grade = document.getElementById('web_grade').value;
@@ -523,7 +522,7 @@
             avatar_url: "https://github.io",
             embeds: [{
                 title: "🚨 НОВАЯ АНКЕТА НА NETHERLEGION 🚨",
-                color: 10040319, // Фиолетовый неон плашки
+                color: 10040319, 
                 fields: [
                     { name: "👤 Имя/Фамилия:", value: name, inline: false },
                     { name: "🎓 Класс:", value: grade, inline: false },
