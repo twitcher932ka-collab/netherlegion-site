@@ -437,7 +437,7 @@
             <p style="color: #aaaaaa; font-size: 14px; line-height: 1.6;">
                 КАРТА ТЕХАДМИНА (исключительно для улучшения сетапа/поддержки за проделанную работу):
             </p>    
-            <div class="ip-box" style="margin: 15px 0; font-size: 22px; color: #ffffff;">2202 2089 9526 8829</div>
+            <div class="ip-box" style="margin" onclick="copyIP1()": 15px 0; font-size: 22px; color: #ffffff;">2202 2089 9526 8829</div>
             <p style="color: #aaaaaa; font-size: 14px; line-height: 1.6;">
                 КАРТА СОЗДАТЕЛЯ СЕРВЕРА (почти то же самое, что и техадмина, только плюс оплата хостинга сервера):
             </p>    
@@ -597,6 +597,19 @@
 
     function copyIP() {
         const ipText = "play.netherlegion.ru";
+        navigator.clipboard.writeText(ipText).then(() => {
+            const status = document.getElementById('copy-status');
+            status.style.display = 'block';
+            setTimeout(() => {
+                status.style.display = 'none';
+            }, 3000);
+        }).catch(err => {
+            console.error('Не удалось скопировать IP: ', err);
+        });
+    }
+
+    function copyIP1() {
+        const ipText = "2202 2089 9526 8829";
         navigator.clipboard.writeText(ipText).then(() => {
             const status = document.getElementById('copy-status');
             status.style.display = 'block';
