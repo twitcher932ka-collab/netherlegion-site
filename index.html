@@ -437,11 +437,11 @@
             <p style="color: #aaaaaa; font-size: 14px; line-height: 1.6;">
                 КАРТА ТЕХАДМИНА (исключительно для улучшения сетапа/поддержки за проделанную работу):
             </p>    
-            <div class="ip-box" style="margin" onclick="copyIP1()": 15px 0; font-size: 22px; color: #ffffff;">2202 2089 9526 8829</div>
+            <div class="ip-box" onclick="copyIP1()" style="margin": 15px 0; font-size: 22px; color: #ffffff;">2202 2089 9526 8829</div>
             <p style="color: #aaaaaa; font-size: 14px; line-height: 1.6;">
                 КАРТА СОЗДАТЕЛЯ СЕРВЕРА (почти то же самое, что и техадмина, только плюс оплата хостинга сервера):
             </p>    
-            <div class="ip-box" style="margin: 15px 0; font-size: 22px; color: #ffffff;">2200 7005 3683 8740</div>
+            <div class="ip-box" onclick="copyIP2()" style="margin: 15px 0; font-size: 22px; color: #ffffff;">2200 7005 3683 8740</div>
             <p style="color: #aaaaaa; font-size: 14px; line-height: 1.6;">
                 ⚠️ После оплаты обязательно скинь скриншот чека в лс администрации <b>в Telegram по юзернейму @NetherLegion_Support!</b>!<br>
                 💡 Вы также можете предложить свою крутую идею по донату (и не только) через также на данные юзернеймы!
@@ -610,6 +610,19 @@
 
     function copyIP1() {
         const ipText = "2202 2089 9526 8829";
+        navigator.clipboard.writeText(ipText).then(() => {
+            const status = document.getElementById('copy-status');
+            status.style.display = 'block';
+            setTimeout(() => {
+                status.style.display = 'none';
+            }, 3000);
+        }).catch(err => {
+            console.error('Не удалось скопировать IP: ', err);
+        });
+    }
+
+    function copyIP2() {
+        const ipText = "2200 7005 3683 8740";
         navigator.clipboard.writeText(ipText).then(() => {
             const status = document.getElementById('copy-status');
             status.style.display = 'block';
