@@ -510,7 +510,29 @@
         const btnArchive = document.getElementById("btn-google-archive");
 
         if(btnArchive) btnArchive.href = googleArchiveUrl;
-        
+
+        const gridContainer = document.querySelector('.top-grid-sections');
+        if (gridContainer) {
+            // 1. Превращаем контейнер в умную Grid-сетку из двух колонок
+            gridContainer.style.display = 'grid';
+            gridContainer.style.gridTemplateColumns = 'repeat(2, 1fr)';
+            gridContainer.style.gap = '20px';
+
+            // 2. Находим плашку Telegram (это третья по счету card-custom)
+            const cards = gridContainer.querySelectorAll('.card-custom');
+            if (cards.length >= 3) {
+                const tgCard = cards[2]; // Третья плашка
+                
+                // Растягиваем её на всю ширину под первыми двумя
+                tgCard.style.gridColumn = '1 / -1';
+            }
+            
+            // 3. Выравниваем по высоте первые две плашки
+            const leftSide = gridContainer.querySelector('.grid-left-side');
+            const rightSide = gridContainer.querySelector('.grid-right-side');
+            if (leftSide) leftSide.style.display = 'flex';
+            if (rightSide) rightSide.style.display = 'flex';
+        }
     });
 
     
