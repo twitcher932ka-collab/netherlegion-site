@@ -306,8 +306,8 @@
 
             <div class="grid-left-side">
                 <div class="card-custom">
-                    <p style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">🔓Чтобы попасть на сервер, пожалуйста, напиши на:  </p>
-                    <div class="ip-box" onclick="copytgusername()">аккаунт </div>
+                    <p style="font-size: 18px; font-weight: bold; margin-bottom: 9px;">🔓Чтобы попасть на сервер, пожалуйста, напиши на аккаунт админимтрации. Мы выдадим вам IP:  </p>
+                    <div class="ip-box" onclick="copytgusername()">аккаунт администрации </div>
                     <p id="copy-status" style="color: #66ff66; margin-top: 12px; font-weight: bold; display: none;">✅ TELEGRAM-АККАУНТ УСПЕШНО СКОПИРОВАН!</p>
                 </div>
             </div>
@@ -514,12 +514,12 @@
         const gridContainer = document.querySelector('.top-grid-sections');
         if (gridContainer) {
 
-            gridContainer.style.marginTop = "-270px"; 
+            gridContainer.style.marginTop = "-350px"; 
             gridContainer.style.position = "relative";
             gridContainer.style.zIndex = "10";
 
             gridContainer.style.display = 'grid';
-            gridContainer.style.gridTemplateColumns = '45% 45%';
+            gridContainer.style.gridTemplateColumns = '45% 35%';
             gridContainer.style.gap = '20px';
 
             const cards = gridContainer.querySelectorAll('.card-custom');
