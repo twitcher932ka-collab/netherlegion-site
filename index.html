@@ -312,7 +312,7 @@
                 </div>
             </div>
 
-            <div class="card-custom" style="text-align: right;">
+            <div class="card-custom">
                 <h4 style="font-size: 18px; color: #9933ff;">Наш Telegram-канал:</h4>
                    <p style="color: #cccccc; margin-top: 10px; font-size: 14px; line-height: 1.5;">
                       Там будут все новости: по поводу сервера, доната, новых проектах и т.д. 
@@ -513,21 +513,26 @@
 
         const gridContainer = document.querySelector('.top-grid-sections');
         if (gridContainer) {
-            // 1. Превращаем контейнер в умную Grid-сетку из двух колонок
+
+            gridContainer.style.marginTop = "-90px"; 
+            gridContainer.style.position = "relative";
+            gridContainer.style.zIndex = "10";
+
             gridContainer.style.display = 'grid';
-            gridContainer.style.gridTemplateColumns = 'repeat(2, 1fr)';
+            gridContainer.style.gridTemplateColumns = '45% 55%';
             gridContainer.style.gap = '20px';
 
-            // 2. Находим плашку Telegram (это третья по счету card-custom)
             const cards = gridContainer.querySelectorAll('.card-custom');
-            if (cards.length >= 3) {
-                const tgCard = cards[2]; // Третья плашка
-                
-                // Растягиваем её на всю ширину под первыми двумя
-                tgCard.style.gridColumn = '1 / -1';
-            }
             
-            // 3. Выравниваем по высоте первые две плашки
+            if (cards.length >= 3) {
+                cards[2].style.gridColumn = '1 / -1';
+            }
+
+            cards.forEach(card => {
+                card.style.padding = "20px";
+                card.style.boxSizing = "border-box";
+            });
+            
             const leftSide = gridContainer.querySelector('.grid-left-side');
             const rightSide = gridContainer.querySelector('.grid-right-side');
             if (leftSide) leftSide.style.display = 'flex';
