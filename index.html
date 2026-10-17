@@ -298,9 +298,9 @@
             
             <div class="grid-left-side">
                 <div class="card-custom">
-                    <p style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">👇 НАЖМИ ДЛЯ КОПИРОВАНИЯ IP 👇  </p>
-                    <div class="ip-box" onclick="copyIP()">NetherLegion.minerent.io</div>
-                    <p id="copy-status" style="color: #66ff66; margin-top: 12px; font-weight: bold; display: none;">✅ IP УСПЕШНО СКОПИРОВАН!</p>
+                    <p style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">Чтобы попасть на сервер, пожалуйста, напиши на:  </p>
+                    <div class="ip-box" onclick="copytgusername()">аккаунт </div>
+                    <p id="copy-status" style="color: #66ff66; margin-top: 12px; font-weight: bold; display: none;">✅ TEKEGRAM-АККАУНТ УСПЕШНО СКОПИРОВАН!</p>
                 </div>
             </div>
 
@@ -313,6 +313,14 @@
                     </p>
                 </div>
             </div>
+
+            <div class="card-custom" style="height: auto; margin-bottom: 25px; max-width: 850px; margin-left: auto; margin-right: auto;">
+            <h2 style="color: #9933ff;">Наш Telegram-канал:</h2>
+            <p style="color: #cccccc; margin: 15px 0; line-height: 1.6;">
+                Там будут все новости: по поводу сервера, доната, новых проектах и т.д. Канал частный, заявки принимаются от 1 минуты до 10 часов.
+            </p>
+            <a href="https://t.me/+03GUwezNswM0OTcy" target="_blank" class="btn-action">🟢 Ссылка на канал</a>
+            </div>  
 
         </div>
     </div>
@@ -445,11 +453,11 @@
             <p style="color: #aaaaaa; font-size: 14px; line-height: 1.6;">
                 КАРТА ТЕХАДМИНА (исключительно для улучшения сетапа/поддержки за проделанную работу):
             </p>    
-            <div class="ip-box" onclick="copycardnumber1()" style="margin: 15px 0; font-size: 22px; color: #ffffff;">2202 2092 9900 2310</div>
+            <div class="ip-box" onclick="copycardnumber1()" style="margin: 15px 0; font-size: 22px; color: #ffffff;">👇НАЖМИТЕ ДЛЯ КОПИРОВАНИЯ👇</div>
             <p style="color: #aaaaaa; font-size: 14px; line-height: 1.6;">
                 КАРТА СОЗДАТЕЛЯ СЕРВЕРА (почти то же самое, что и у техадмина, только плюс оплата хостинга сервера):
             </p>    
-            <div class="ip-box" onclick="copycardnumber2()" style="margin: 15px 0; font-size: 22px; color: #ffffff;">2200 7005 3683 8740</div>
+            <div class="ip-box" onclick="copycardnumber2()" style="margin: 15px 0; font-size: 22px; color: #ffffff;">👇НАЖМИТЕ ДЛЯ КОПИРОВАНИЯ👇</div>
             <p style="color: #aaaaaa; font-size: 14px; line-height: 1.6;">
                 ⚠️ После оплаты обязательно скинь скриншот чека в лс администрации 
                 <b>в Telegram по юзернейму <div class="ip-box" onclick="copytgusername()">@NetherLegion_Support</div>! </b>!<br>
@@ -596,19 +604,6 @@
             if (btn.getAttribute('onclick').includes(id)) return btn;
         }
         return null;
-    }
-
-    function copyIP() {
-        const ipText = "NetherLegion.minerent.io";
-        navigator.clipboard.writeText(ipText).then(() => {
-            const status = document.getElementById('copy-status');
-            status.style.display = 'block';
-            setTimeout(() => {
-                status.style.display = 'none';
-            }, 3000);
-        }).catch(err => {
-            console.error('Не удалось скопировать IP: ', err);
-        });
     }
 
     function copycardnumber1() {
